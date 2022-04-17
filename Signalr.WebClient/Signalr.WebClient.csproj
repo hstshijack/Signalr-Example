@@ -1,0 +1,405 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30A88269-B513-4806-8263-7D7A70ACAEB4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Signalr.WebClient</RootNamespace>
+    <AssemblyName>Signalr.WebClient</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44313</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Index.html" />
+    <Content Include="lib\jquery\AUTHORS.txt" />
+    <Content Include="lib\jquery\dist\jquery.js" />
+    <Content Include="lib\jquery\dist\jquery.min.js" />
+    <Content Include="lib\jquery\dist\jquery.slim.js" />
+    <Content Include="lib\jquery\dist\jquery.slim.min.js" />
+    <Content Include="lib\jquery\external\sizzle\dist\sizzle.js" />
+    <Content Include="lib\jquery\external\sizzle\dist\sizzle.min.js" />
+    <Content Include="lib\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="lib\jquery\LICENSE.txt" />
+    <Content Include="lib\jquery\src\ajax.js" />
+    <Content Include="lib\jquery\src\ajax\jsonp.js" />
+    <Content Include="lib\jquery\src\ajax\load.js" />
+    <Content Include="lib\jquery\src\ajax\script.js" />
+    <Content Include="lib\jquery\src\ajax\var\location.js" />
+    <Content Include="lib\jquery\src\ajax\var\nonce.js" />
+    <Content Include="lib\jquery\src\ajax\var\rquery.js" />
+    <Content Include="lib\jquery\src\ajax\xhr.js" />
+    <Content Include="lib\jquery\src\attributes.js" />
+    <Content Include="lib\jquery\src\attributes\attr.js" />
+    <Content Include="lib\jquery\src\attributes\classes.js" />
+    <Content Include="lib\jquery\src\attributes\prop.js" />
+    <Content Include="lib\jquery\src\attributes\support.js" />
+    <Content Include="lib\jquery\src\attributes\val.js" />
+    <Content Include="lib\jquery\src\callbacks.js" />
+    <Content Include="lib\jquery\src\core.js" />
+    <Content Include="lib\jquery\src\core\access.js" />
+    <Content Include="lib\jquery\src\core\camelCase.js" />
+    <Content Include="lib\jquery\src\core\DOMEval.js" />
+    <Content Include="lib\jquery\src\core\init.js" />
+    <Content Include="lib\jquery\src\core\isAttached.js" />
+    <Content Include="lib\jquery\src\core\nodeName.js" />
+    <Content Include="lib\jquery\src\core\parseHTML.js" />
+    <Content Include="lib\jquery\src\core\parseXML.js" />
+    <Content Include="lib\jquery\src\core\ready-no-deferred.js" />
+    <Content Include="lib\jquery\src\core\ready.js" />
+    <Content Include="lib\jquery\src\core\readyException.js" />
+    <Content Include="lib\jquery\src\core\stripAndCollapse.js" />
+    <Content Include="lib\jquery\src\core\support.js" />
+    <Content Include="lib\jquery\src\core\toType.js" />
+    <Content Include="lib\jquery\src\core\var\rsingleTag.js" />
+    <Content Include="lib\jquery\src\css.js" />
+    <Content Include="lib\jquery\src\css\addGetHookIf.js" />
+    <Content Include="lib\jquery\src\css\adjustCSS.js" />
+    <Content Include="lib\jquery\src\css\curCSS.js" />
+    <Content Include="lib\jquery\src\css\finalPropName.js" />
+    <Content Include="lib\jquery\src\css\hiddenVisibleSelectors.js" />
+    <Content Include="lib\jquery\src\css\showHide.js" />
+    <Content Include="lib\jquery\src\css\support.js" />
+    <Content Include="lib\jquery\src\css\var\cssExpand.js" />
+    <Content Include="lib\jquery\src\css\var\getStyles.js" />
+    <Content Include="lib\jquery\src\css\var\isHiddenWithinTree.js" />
+    <Content Include="lib\jquery\src\css\var\rboxStyle.js" />
+    <Content Include="lib\jquery\src\css\var\rnumnonpx.js" />
+    <Content Include="lib\jquery\src\css\var\swap.js" />
+    <Content Include="lib\jquery\src\data.js" />
+    <Content Include="lib\jquery\src\data\Data.js" />
+    <Content Include="lib\jquery\src\data\var\acceptData.js" />
+    <Content Include="lib\jquery\src\data\var\dataPriv.js" />
+    <Content Include="lib\jquery\src\data\var\dataUser.js" />
+    <Content Include="lib\jquery\src\deferred.js" />
+    <Content Include="lib\jquery\src\deferred\exceptionHook.js" />
+    <Content Include="lib\jquery\src\deprecated.js" />
+    <Content Include="lib\jquery\src\deprecated\ajax-event-alias.js" />
+    <Content Include="lib\jquery\src\deprecated\event.js" />
+    <Content Include="lib\jquery\src\dimensions.js" />
+    <Content Include="lib\jquery\src\effects.js" />
+    <Content Include="lib\jquery\src\effects\animatedSelector.js" />
+    <Content Include="lib\jquery\src\effects\Tween.js" />
+    <Content Include="lib\jquery\src\event.js" />
+    <Content Include="lib\jquery\src\event\focusin.js" />
+    <Content Include="lib\jquery\src\event\support.js" />
+    <Content Include="lib\jquery\src\event\trigger.js" />
+    <Content Include="lib\jquery\src\exports\amd.js" />
+    <Content Include="lib\jquery\src\exports\global.js" />
+    <Content Include="lib\jquery\src\jquery.js" />
+    <Content Include="lib\jquery\src\manipulation.js" />
+    <Content Include="lib\jquery\src\manipulation\buildFragment.js" />
+    <Content Include="lib\jquery\src\manipulation\getAll.js" />
+    <Content Include="lib\jquery\src\manipulation\setGlobalEval.js" />
+    <Content Include="lib\jquery\src\manipulation\support.js" />
+    <Content Include="lib\jquery\src\manipulation\var\rscriptType.js" />
+    <Content Include="lib\jquery\src\manipulation\var\rtagName.js" />
+    <Content Include="lib\jquery\src\manipulation\wrapMap.js" />
+    <Content Include="lib\jquery\src\manipulation\_evalUrl.js" />
+    <Content Include="lib\jquery\src\offset.js" />
+    <Content Include="lib\jquery\src\queue.js" />
+    <Content Include="lib\jquery\src\queue\delay.js" />
+    <Content Include="lib\jquery\src\selector-native.js" />
+    <Content Include="lib\jquery\src\selector-sizzle.js" />
+    <Content Include="lib\jquery\src\selector.js" />
+    <Content Include="lib\jquery\src\serialize.js" />
+    <Content Include="lib\jquery\src\traversing.js" />
+    <Content Include="lib\jquery\src\traversing\findFilter.js" />
+    <Content Include="lib\jquery\src\traversing\var\dir.js" />
+    <Content Include="lib\jquery\src\traversing\var\rneedsContext.js" />
+    <Content Include="lib\jquery\src\traversing\var\siblings.js" />
+    <Content Include="lib\jquery\src\var\arr.js" />
+    <Content Include="lib\jquery\src\var\class2type.js" />
+    <Content Include="lib\jquery\src\var\document.js" />
+    <Content Include="lib\jquery\src\var\documentElement.js" />
+    <Content Include="lib\jquery\src\var\flat.js" />
+    <Content Include="lib\jquery\src\var\fnToString.js" />
+    <Content Include="lib\jquery\src\var\getProto.js" />
+    <Content Include="lib\jquery\src\var\hasOwn.js" />
+    <Content Include="lib\jquery\src\var\indexOf.js" />
+    <Content Include="lib\jquery\src\var\isFunction.js" />
+    <Content Include="lib\jquery\src\var\isWindow.js" />
+    <Content Include="lib\jquery\src\var\ObjectFunctionString.js" />
+    <Content Include="lib\jquery\src\var\pnum.js" />
+    <Content Include="lib\jquery\src\var\push.js" />
+    <Content Include="lib\jquery\src\var\rcheckableType.js" />
+    <Content Include="lib\jquery\src\var\rcssNum.js" />
+    <Content Include="lib\jquery\src\var\rnothtmlwhite.js" />
+    <Content Include="lib\jquery\src\var\slice.js" />
+    <Content Include="lib\jquery\src\var\support.js" />
+    <Content Include="lib\jquery\src\var\toString.js" />
+    <Content Include="lib\jquery\src\wrap.js" />
+    <Content Include="lib\signalr\dist\browser\signalr.js" />
+    <Content Include="lib\signalr\dist\browser\signalr.min.js" />
+    <Content Include="lib\signalr\dist\cjs\AbortController.js" />
+    <Content Include="lib\signalr\dist\cjs\browser-index.js" />
+    <Content Include="lib\signalr\dist\cjs\DefaultHttpClient.js" />
+    <Content Include="lib\signalr\dist\cjs\DefaultReconnectPolicy.js" />
+    <Content Include="lib\signalr\dist\cjs\Errors.js" />
+    <Content Include="lib\signalr\dist\cjs\FetchHttpClient.js" />
+    <Content Include="lib\signalr\dist\cjs\HandshakeProtocol.js" />
+    <Content Include="lib\signalr\dist\cjs\HttpClient.js" />
+    <Content Include="lib\signalr\dist\cjs\HttpConnection.js" />
+    <Content Include="lib\signalr\dist\cjs\HubConnection.js" />
+    <Content Include="lib\signalr\dist\cjs\HubConnectionBuilder.js" />
+    <Content Include="lib\signalr\dist\cjs\IConnection.js" />
+    <Content Include="lib\signalr\dist\cjs\IHttpConnectionOptions.js" />
+    <Content Include="lib\signalr\dist\cjs\IHubProtocol.js" />
+    <Content Include="lib\signalr\dist\cjs\ILogger.js" />
+    <Content Include="lib\signalr\dist\cjs\index.js" />
+    <Content Include="lib\signalr\dist\cjs\IRetryPolicy.js" />
+    <Content Include="lib\signalr\dist\cjs\ITransport.js" />
+    <Content Include="lib\signalr\dist\cjs\JsonHubProtocol.js" />
+    <Content Include="lib\signalr\dist\cjs\Loggers.js" />
+    <Content Include="lib\signalr\dist\cjs\LongPollingTransport.js" />
+    <Content Include="lib\signalr\dist\cjs\Polyfills.js" />
+    <Content Include="lib\signalr\dist\cjs\ServerSentEventsTransport.js" />
+    <Content Include="lib\signalr\dist\cjs\Stream.js" />
+    <Content Include="lib\signalr\dist\cjs\Subject.js" />
+    <Content Include="lib\signalr\dist\cjs\TextMessageFormat.js" />
+    <Content Include="lib\signalr\dist\cjs\Utils.js" />
+    <Content Include="lib\signalr\dist\cjs\WebSocketTransport.js" />
+    <Content Include="lib\signalr\dist\cjs\XhrHttpClient.js" />
+    <Content Include="lib\signalr\dist\esm\AbortController.js" />
+    <Content Include="lib\signalr\dist\esm\browser-index.js" />
+    <Content Include="lib\signalr\dist\esm\DefaultHttpClient.js" />
+    <Content Include="lib\signalr\dist\esm\DefaultReconnectPolicy.js" />
+    <Content Include="lib\signalr\dist\esm\Errors.js" />
+    <Content Include="lib\signalr\dist\esm\FetchHttpClient.js" />
+    <Content Include="lib\signalr\dist\esm\HandshakeProtocol.js" />
+    <Content Include="lib\signalr\dist\esm\HttpClient.js" />
+    <Content Include="lib\signalr\dist\esm\HttpConnection.js" />
+    <Content Include="lib\signalr\dist\esm\HubConnection.js" />
+    <Content Include="lib\signalr\dist\esm\HubConnectionBuilder.js" />
+    <Content Include="lib\signalr\dist\esm\IConnection.js" />
+    <Content Include="lib\signalr\dist\esm\IHttpConnectionOptions.js" />
+    <Content Include="lib\signalr\dist\esm\IHubProtocol.js" />
+    <Content Include="lib\signalr\dist\esm\ILogger.js" />
+    <Content Include="lib\signalr\dist\esm\index.js" />
+    <Content Include="lib\signalr\dist\esm\IRetryPolicy.js" />
+    <Content Include="lib\signalr\dist\esm\ITransport.js" />
+    <Content Include="lib\signalr\dist\esm\JsonHubProtocol.js" />
+    <Content Include="lib\signalr\dist\esm\Loggers.js" />
+    <Content Include="lib\signalr\dist\esm\LongPollingTransport.js" />
+    <Content Include="lib\signalr\dist\esm\Polyfills.js" />
+    <Content Include="lib\signalr\dist\esm\ServerSentEventsTransport.js" />
+    <Content Include="lib\signalr\dist\esm\Stream.js" />
+    <Content Include="lib\signalr\dist\esm\Subject.js" />
+    <Content Include="lib\signalr\dist\esm\TextMessageFormat.js" />
+    <Content Include="lib\signalr\dist\esm\Utils.js" />
+    <Content Include="lib\signalr\dist\esm\WebSocketTransport.js" />
+    <Content Include="lib\signalr\dist\esm\XhrHttpClient.js" />
+    <Content Include="lib\signalr\dist\webworker\signalr.js" />
+    <Content Include="lib\signalr\dist\webworker\signalr.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="libman.json" />
+    <Content Include="lib\jquery\bower.json" />
+    <Content Include="lib\jquery\dist\jquery.min.map" />
+    <Content Include="lib\jquery\dist\jquery.slim.min.map" />
+    <Content Include="lib\jquery\external\sizzle\dist\sizzle.min.map" />
+    <Content Include="lib\jquery\package.json" />
+    <Content Include="lib\jquery\README.md" />
+    <Content Include="lib\signalr\dist\browser\signalr.js.map" />
+    <Content Include="lib\signalr\dist\browser\signalr.min.js.map" />
+    <Content Include="lib\signalr\dist\cjs\AbortController.js.map" />
+    <Content Include="lib\signalr\dist\cjs\browser-index.js.map" />
+    <Content Include="lib\signalr\dist\cjs\DefaultHttpClient.js.map" />
+    <Content Include="lib\signalr\dist\cjs\DefaultReconnectPolicy.js.map" />
+    <Content Include="lib\signalr\dist\cjs\Errors.js.map" />
+    <Content Include="lib\signalr\dist\cjs\FetchHttpClient.js.map" />
+    <Content Include="lib\signalr\dist\cjs\HandshakeProtocol.js.map" />
+    <Content Include="lib\signalr\dist\cjs\HttpClient.js.map" />
+    <Content Include="lib\signalr\dist\cjs\HttpConnection.js.map" />
+    <Content Include="lib\signalr\dist\cjs\HubConnection.js.map" />
+    <Content Include="lib\signalr\dist\cjs\HubConnectionBuilder.js.map" />
+    <Content Include="lib\signalr\dist\cjs\IConnection.js.map" />
+    <Content Include="lib\signalr\dist\cjs\IHttpConnectionOptions.js.map" />
+    <Content Include="lib\signalr\dist\cjs\IHubProtocol.js.map" />
+    <Content Include="lib\signalr\dist\cjs\ILogger.js.map" />
+    <Content Include="lib\signalr\dist\cjs\index.js.map" />
+    <Content Include="lib\signalr\dist\cjs\IRetryPolicy.js.map" />
+    <Content Include="lib\signalr\dist\cjs\ITransport.js.map" />
+    <Content Include="lib\signalr\dist\cjs\JsonHubProtocol.js.map" />
+    <Content Include="lib\signalr\dist\cjs\Loggers.js.map" />
+    <Content Include="lib\signalr\dist\cjs\LongPollingTransport.js.map" />
+    <Content Include="lib\signalr\dist\cjs\Polyfills.js.map" />
+    <Content Include="lib\signalr\dist\cjs\ServerSentEventsTransport.js.map" />
+    <Content Include="lib\signalr\dist\cjs\Stream.js.map" />
+    <Content Include="lib\signalr\dist\cjs\Subject.js.map" />
+    <Content Include="lib\signalr\dist\cjs\TextMessageFormat.js.map" />
+    <Content Include="lib\signalr\dist\cjs\Utils.js.map" />
+    <Content Include="lib\signalr\dist\cjs\WebSocketTransport.js.map" />
+    <Content Include="lib\signalr\dist\cjs\XhrHttpClient.js.map" />
+    <Content Include="lib\signalr\dist\esm\AbortController.js.map" />
+    <Content Include="lib\signalr\dist\esm\browser-index.js.map" />
+    <Content Include="lib\signalr\dist\esm\DefaultHttpClient.js.map" />
+    <Content Include="lib\signalr\dist\esm\DefaultReconnectPolicy.js.map" />
+    <Content Include="lib\signalr\dist\esm\Errors.js.map" />
+    <Content Include="lib\signalr\dist\esm\FetchHttpClient.js.map" />
+    <Content Include="lib\signalr\dist\esm\HandshakeProtocol.js.map" />
+    <Content Include="lib\signalr\dist\esm\HttpClient.js.map" />
+    <Content Include="lib\signalr\dist\esm\HttpConnection.js.map" />
+    <Content Include="lib\signalr\dist\esm\HubConnection.js.map" />
+    <Content Include="lib\signalr\dist\esm\HubConnectionBuilder.js.map" />
+    <Content Include="lib\signalr\dist\esm\IConnection.js.map" />
+    <Content Include="lib\signalr\dist\esm\IHttpConnectionOptions.js.map" />
+    <Content Include="lib\signalr\dist\esm\IHubProtocol.js.map" />
+    <Content Include="lib\signalr\dist\esm\ILogger.js.map" />
+    <Content Include="lib\signalr\dist\esm\index.js.map" />
+    <Content Include="lib\signalr\dist\esm\IRetryPolicy.js.map" />
+    <Content Include="lib\signalr\dist\esm\ITransport.js.map" />
+    <Content Include="lib\signalr\dist\esm\JsonHubProtocol.js.map" />
+    <Content Include="lib\signalr\dist\esm\Loggers.js.map" />
+    <Content Include="lib\signalr\dist\esm\LongPollingTransport.js.map" />
+    <Content Include="lib\signalr\dist\esm\Polyfills.js.map" />
+    <Content Include="lib\signalr\dist\esm\ServerSentEventsTransport.js.map" />
+    <Content Include="lib\signalr\dist\esm\Stream.js.map" />
+    <Content Include="lib\signalr\dist\esm\Subject.js.map" />
+    <Content Include="lib\signalr\dist\esm\TextMessageFormat.js.map" />
+    <Content Include="lib\signalr\dist\esm\Utils.js.map" />
+    <Content Include="lib\signalr\dist\esm\WebSocketTransport.js.map" />
+    <Content Include="lib\signalr\dist\esm\XhrHttpClient.js.map" />
+    <Content Include="lib\signalr\dist\webworker\signalr.js.map" />
+    <Content Include="lib\signalr\dist\webworker\signalr.min.js.map" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="lib\signalr\dist\esm\AbortController.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\browser-index.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\DefaultHttpClient.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\DefaultReconnectPolicy.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\Errors.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\FetchHttpClient.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\HandshakeProtocol.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\HttpClient.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\HttpConnection.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\HubConnection.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\HubConnectionBuilder.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\IConnection.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\IHttpConnectionOptions.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\IHubProtocol.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\ILogger.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\index.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\IRetryPolicy.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\ITransport.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\JsonHubProtocol.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\Loggers.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\LongPollingTransport.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\Polyfills.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\ServerSentEventsTransport.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\Stream.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\Subject.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\TextMessageFormat.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\Utils.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\WebSocketTransport.d.ts" />
+    <TypeScriptCompile Include="lib\signalr\dist\esm\XhrHttpClient.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64310</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:62722/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

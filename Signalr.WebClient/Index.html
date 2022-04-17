@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/signalr/dist/browser/signalr.min.js"></script>
+</head>
+<body>
+    <p>
+        <label id="lblConnectionCount"></label>
+    </p>
+    <p>
+        <textarea style="width:100%; height:200px;" id="txtMessages">
+
+        </textarea>
+    </p>
+    <p>
+        <textarea style="width:85%" id="txtMessage">
+
+       </textarea>
+        <button style="width:12%" id="btnGonder">Gönder</button>
+    </p>
+    </p>
+    <script>
+        const hubConnection = new signalR.HubConnectionBuilder().withAutomaticReconnect().withUrl("http://localhost:50696/ChatHub").build();
+      
+        $(function () {
+            $(document).ready(function () {
+             
+               
+                hubConnection.on("HasNewConnection", function (connectionCount) {
+                    $('#lblConnectionCount').html("Toplam bağlantı sayısı :" + connectionCount);
+                });
+                hubConnection.on("HasNewMessage", function (connectionId, message) {
+                    /*   $('#txtMessages').text(connectionId + "tarafından yazıldı :" + message);*/
+                    $('#txtMessages').append(connectionId + "tarafından yazıldı :" + message +"\r");
+                });
+
+                start();
+
+                async function start() {
+
+                    await hubConnection.start();
+
+
+                }
+
+                $('#btnGonder').click(function (e) {
+                    hubConnection.invoke("PublicMessage", $('#txtMessage').val());
+                    $('#txtMessage').val("");
+                })
+            })
+        })
+    </script>
+</body>
+</html>
